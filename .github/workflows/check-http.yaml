@@ -12,7 +12,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install dependencies
-        run: sudo apt-get update && sudo apt-get install -y wget && sudo apt-get install -y os and sudo apt-get install -y subprocess
+        run: |
+          sudo apt-get update && sudo apt-get install -y wget && sudo apt-get install -y os and sudo apt-get install -y subprocess
 
       - name: Run HTTP connectivity check
         run: python3 main.py
