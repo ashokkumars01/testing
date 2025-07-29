@@ -15,8 +15,8 @@ jobs:
         run: |
           sudo apt-get update 
           sudo apt-get install -y wget 
-          sudo apt-get install -y os 
           sudo apt-get install -y subprocess
+          sudo apt-get install -y os 
 
       - name: Run HTTP connectivity check
         run: python3 main.py
