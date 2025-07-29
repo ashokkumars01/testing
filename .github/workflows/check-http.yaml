@@ -1,7 +1,6 @@
 name: Check HTTP Connectivity
 
-on:
-  workflow_dispatch:  # Allows manual trigger
+on: push  # Allows manual trigger
 
 jobs:
   check-connectivity:
