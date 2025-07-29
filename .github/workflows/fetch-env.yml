@@ -5,7 +5,11 @@ on:
 
 jobs:
   run-in-self-hosted:
-    runs-on: self-hosted  # Your local machine runner
+    runs-on: ubuntu-latest  # Your local machine runner
+
+    env:
+      ARTIFACTORY_TOKEN: ${{ secrets.ARTIFACTORY_TOKEN }}
+      ARTIFACTORY_INTERNAL_TOKEN: ${{ secrets.ARTIFACTORY_INTERNAL_TOKEN }}
 
     steps:
       - name: Checkout code
@@ -20,3 +24,6 @@ jobs:
             -e ARTIFACTORY_TOKEN \
             -e ARTIFACTORY_INTERNAL_TOKEN \
             env-checker
+
+
+
